@@ -1,15 +1,14 @@
-var express = require("express");
-var logger = require("morgan");
-var mongoose = require("mongoose");
+const express = require("express");
+const logger = require("morgan");
+const mongoose = require("mongoose");
+const axios = require("axios");
+const cheerio = require("cheerio");
 
-var axios = require("axios");
-var cheerio = require("cheerio");
+const db = require("./models");
 
-var db = require("./models");
+const PORT = 3000;
 
-var PORT = 3000;
-
-var app = express();
+const app = express();
 
 app.use(logger("dev"));
 
